@@ -1,106 +1,106 @@
-# 📚 سیستم مدیریت کتابخانه
+# 📚 Library Management System
 
-یک برنامه دسکتاپ حرفه‌ای برای مدیریت کتابخانه، توسعه‌یافته با Python و رابط کاربری Tkinter با دیتابیس SQLite.
-
----
-
-## ✨ ویژگی‌ها
-
-### 🔐 احراز هویت و مدیریت کاربر
-- ورود و ثبت‌نام کاربران جدید
-- سیستم نقش‌های دو سطحی (کاربر عادی / مدیر)
-- کنترل دسترسی مبتنی بر نقش
-
-### 📖 مدیریت کتاب‌ها
-- ➕ افزودن کتاب‌های جدید
-- ✏️ ویرایش اطلاعات کتاب
-- 🗑️ حذف کتاب‌ها
-- 🔍 جستجوی پیشرفته بر اساس عنوان
-- 📋 نمایش اطلاعات جامع (عنوان، نویسنده، ژانر، سال انتشار، وضعیت)
-
-### 👥 مدیریت کاربران _(فقط برای مدیران)_
-- ➕ افزودن کاربر جدید
-- ✏️ ویرایش اطلاعات کاربران
-- 🗑️ حذف کاربران
-- 📊 نمایش لیست تمام کاربران
-- 🔐 اختصاص سطح دسترسی مدیریتی
+A professional desktop application for managing libraries, developed with Python, Tkinter GUI, and SQLite database. This project was created as a **university semester project**.
 
 ---
 
-## 🛠️ پیش‌نیازها
+## ✨ Features
+
+### 🔐 Authentication & User Management
+- User login and registration
+- Dual-role access control system (Regular User / Administrator)
+- Role-based access control (RBAC)
+
+### 📖 Book Management
+- ➕ Add new books
+- ✏️ Edit book information
+- 🗑️ Delete books
+- 🔍 Advanced search by title
+- 📋 Display comprehensive information (title, author, genre, publication year, status)
+
+### 👥 User Management _(Admin Only)_
+- ➕ Add new users
+- ✏️ Edit user information
+- 🗑️ Delete users
+- 📊 View list of all users
+- 🔐 Assign administrative privileges
+
+---
+
+## 🛠️ Requirements
 
 - **Python** ≥ 3.6
-- کتابخانه‌های استاندارد (پیش‌نصب شده):
-  - `tkinter` - برای رابط کاربری
-  - `sqlite3` - برای مدیریت دیتابیس
+- Standard libraries (pre-installed):
+  - `tkinter` - For GUI
+  - `sqlite3` - For database management
 
 ---
 
-## 🚀 شروع سریع
+## 🚀 Quick Start
 
-### 1️⃣ کلون کردن مخزن
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/amirh-ganji/library-manager.git
 cd library-manager
 ```
 
-### 2️⃣ اجرای برنامه
+### 2️⃣ Run the Application
 ```bash
 python library.py
 ```
 
-> **نکته:** دیتابیس (`library.db`) به صورت خودکار هنگام اولین اجرا ایجاد می‌شود.
+> **Note:** The database (`library.db`) is automatically created on first run.
 
 ---
 
-## 📁 ساختار پروژه
+## 📁 Project Structure
 
 ```
 library-manager/
 │
-├── library.py         # فایل اصلی برنامه
-├── library.db         # دیتابیس SQLite (ایجاد خودکار)
-├── README.md          # توثیق پروژه
-└── .gitignore         # فایل‌های نادیده‌گرفته شده
+├── library.py         # Main application file
+├── library.db         # SQLite database (auto-generated)
+├── README.md          # Project documentation
+└── .gitignore         # Git ignore file
 ```
 
 ---
 
-## 🎯 راهنمای استفاده
+## 🎯 Usage Guide
 
-### 📝 ورود یا ثبت‌نام
-1. برنامه را اجرا کنید
-2. درپنجره ورود، نام کاربری و رمز عبور وارد کنید
-3. برای کاربران جدید، بر روی دکمه "ثبت نام" کلیک کنید
+### 📝 Login or Register
+1. Run the application
+2. Enter username and password in the login window
+3. For new users, click the "Register" button
 
-### 📚 کار با کتاب‌ها
-**افزودن کتاب:**
-- دکمه "افزودن کتاب" را کلیک کنید
-- اطلاعات کتاب (عنوان، نویسنده، ژانر، سال، وضعیت) را وارد کنید
-- دکمه "افزودن" را فشار دهید
+### 📚 Working with Books
+**Adding a Book:**
+- Click the "Add Book" button
+- Enter book information (title, author, genre, year, status)
+- Click "Add" to save
 
-**ویرایش کتاب:**
-- کتاب مورد نظر را از لیست انتخاب کنید
-- دکمه "ویرایش کتاب" را کلیک کنید
-- تغییرات لازم را انجام داده و ذخیره کنید
+**Editing a Book:**
+- Select the desired book from the list
+- Click the "Edit Book" button
+- Make necessary changes and save
 
-**جستجوی کتاب:**
-- دکمه "جستجوی کتاب" را کلیک کنید
-- عنوان یا بخشی از آن را وارد کنید
-- نتایج به صورت خودکار نمایش داده می‌شوند
+**Searching for a Book:**
+- Click the "Search Book" button
+- Enter the title or part of it
+- Results are displayed automatically
 
-**حذف کتاب:**
-- کتاب مورد نظر را انتخاب کرده و "حذف کتاب" را کلیک کنید
+**Deleting a Book:**
+- Select the desired book and click "Delete Book"
 
-### 👤 مدیریت کاربران _(برای مدیران)_
-- درصورتی که کاربر مدیر باشد، بخش مدیریت کاربران به صورت خودکار نمایش داده می‌شود
-- می‌توانید کاربران را اضافه، ویرایش یا حذف کنید
+### 👤 User Management _(For Administrators)_
+- If the user has admin privileges, the user management section is automatically displayed
+- You can add, edit, or delete users
 
 ---
 
-## 🗄️ ساختار دیتابیس
+## 🗄️ Database Structure
 
-### جدول `books` 📖
+### `books` Table 📖
 ```sql
 CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -112,7 +112,7 @@ CREATE TABLE books (
 );
 ```
 
-### جدول `users` 👤
+### `users` Table 👤
 ```sql
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -124,47 +124,47 @@ CREATE TABLE users (
 
 ---
 
-## ⚠️ اطلاعات امنیتی
+## ⚠️ Security Information
 
-> ⚠️ **توجه:** این پروژه برای اهداف **آموزشی و توسعه‌ای** طراحی شده است.
+> ⚠️ **Important:** This is an **academic/educational project** and should not be used in production environments without proper security improvements.
 
-### توصیه‌های امنیتی برای استفاده در محیط واقعی:
+### Security Recommendations for Production Use:
 
-- 🔐 **رمزگذاری رمزعبور:** از الگوریتم‌های قوی مانند `bcrypt` یا `Argon2` استفاده کنید
+- 🔐 **Password Encryption:** Use strong algorithms like `bcrypt` or `Argon2`
   ```python
   from bcrypt import hashpw, checkpw
-  # نمونه: hashed = hashpw(password.encode(), bcrypt.gensalt())
+  # Example: hashed = hashpw(password.encode(), bcrypt.gensalt())
   ```
 
-- 🔒 **اتصال دیتابیس:**
-  - محتاطانه از متغیرهای محیطی برای ذخیره اطلاعات حساس استفاده کنید
-  - درمحیط تولید، از سرورهای دیتابیس مختص (PostgreSQL، MySQL) استفاده کنید
+- 🔒 **Database Connection:**
+  - Use environment variables to store sensitive information
+  - In production, use dedicated database servers (PostgreSQL, MySQL)
 
-- 🛡️ **اعتبارسنجی ورودی:** تمام ورودی‌های کاربر را تحقق دهید
+- 🛡️ **Input Validation:** Validate all user inputs
 
-- 🔑 **مجوزها:** سطح دسترسی و مجوزهای دسترسی را به دقت مدیریت کنید
+- 🔑 **Access Control:** Carefully manage access levels and permissions
 
 ---
 
-## 📝 مثال استفاده
+## 📝 Usage Example
 
 ```python
-# اجرای برنامه
+# Running the application
 python library.py
 
-# مراحل:
-# 1. ثبت‌نام کاربر جدید
-# 2. ورود به سیستم
-# 3. افزودن، ویرایش یا حذف کتاب‌ها
-# 4. (برای مدیران) مدیریت سایر کاربران
+# Steps:
+# 1. Register a new user
+# 2. Log in to the system
+# 3. Add, edit, or delete books
+# 4. (For admins) Manage other users
 ```
 
 ---
 
-## 🐛 حل مشکلات
+## 🐛 Troubleshooting
 
-**مشکل:** خطای "`tkinter` not found"
-- **حل:** `tkinter` را با دستور زیر نصب کنید:
+**Issue:** "`tkinter` not found" error
+- **Solution:** Install `tkinter` using the following command:
   ```bash
   # Ubuntu/Debian
   sudo apt-get install python3-tk
@@ -173,37 +173,49 @@ python library.py
   brew install python-tk@3.9
   
   # Windows
-  # tkinter با Python به صورت پیش‌فرض نصب می‌شود
+  # tkinter is pre-installed with Python
   ```
 
-**مشکل:** خطای دیتابیس
-- **حل:** فایل `library.db` را حذف کرده و برنامه را دوباره اجرا کنید
+**Issue:** Database error
+- **Solution:** Delete the `library.db` file and run the program again
 
 ---
 
-## 🤝 مشارکت
+## 🎓 Academic Project Information
 
-از مشارکت شما در بهبود این پروژه استقبال می‌کنیم! لطفاً:
+This project was developed as part of a **university semester assignment**. The main learning objectives included:
+- GUI development with Python (Tkinter)
+- SQLite database design and implementation
+- User authentication and access control
+- CRUD operations (Create, Read, Update, Delete)
 
-1. مخزن را Fork کنید
-2. شاخه ویژگی خود را ایجاد کنید (`git checkout -b feature/AmazingFeature`)
-3. تغییرات خود را Commit کنید (`git commit -m 'Add AmazingFeature'`)
-4. به شاخه Push کنید (`git push origin feature/AmazingFeature`)
-5. یک Pull Request باز کنید
-
----
-
-## 📄 مجوز
-
-این پروژه تحت مجوز **MIT** منتشر شده است. برای جزئیات بیشتر فایل [LICENSE](LICENSE) را مطالعه کنید.
+While this project successfully demonstrates fundamental concepts, it is recommended that any production use includes proper security implementations and error handling.
 
 ---
 
-## 📧 تماس و پیشنهادات
+## 🤝 Contributing
 
-- 🐛 برای گزارش مشکلات، [Issue](https://github.com/amirh-ganji/library-manager/issues) جدید باز کنید
-- 💬 برای پیشنهادات، از [Discussions](https://github.com/amirh-ganji/library-manager/discussions) استفاده کنید
+While this is an academic project, suggestions for improvements are welcome! Please:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-**ساخته‌شده با ❤️ توسط [amirh-ganji](https://github.com/amirh-ganji)**
+## 📄 License
+
+This project is released under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## 📧 Contact & Feedback
+
+- 🐛 For bug reports, open a new [Issue](https://github.com/amirh-ganji/library-manager/issues)
+- 💬 For suggestions, use [Discussions](https://github.com/amirh-ganji/library-manager/discussions)
+
+---
+
+**Made with ❤️ by [amirh-ganji](https://github.com/amirh-ganji)**
