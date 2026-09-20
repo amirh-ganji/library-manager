@@ -66,7 +66,7 @@ def register_user(conn):
     is_admin_var = tk.IntVar()
     ttk.Checkbutton(window, text="Admin", variable=is_admin_var).grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
-    ttk.Button(window, command=submit_registration).grid(row=3, column=0, columnspan=2, padx=5, pady=5)
+    ttk.Button(window, text="Register", command=submit_registration).grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
 # User login form
 def login_user(conn):
