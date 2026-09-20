@@ -104,7 +104,7 @@ def login_user(conn):
 # Open the main window of the Library application.
 def open_main_window(conn, user):
     window = tk.Tk()
-    window.title("کتابخانه")
+    window.title("Library")
     # window.resizable(False, False)
 
     book_list = ttk.Treeview(window, columns=("id", "title", "author", "genre", "year", "status"), show='headings')
