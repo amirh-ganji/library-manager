@@ -1,21 +1,20 @@
 # 📚 Library Management System
 
-A professional desktop application for managing libraries, developed with Python, Tkinter GUI, and SQLite database. This project was created as a **university semester project**.
-
+A desktop application for managing a small library, built with Python, Tkinter and SQLite as a **university semester project**.
 ---
 
 ## ✨ Features
 
 ### 🔐 Authentication & User Management
+
 - User login and registration
-- Dual-role access control system (Regular User / Administrator)
-- Role-based access control (RBAC)
+- Admin flag per user (admin-only user management panel)
 
 ### 📖 Book Management
 - ➕ Add new books
 - ✏️ Edit book information
 - 🗑️ Delete books
-- 🔍 Advanced search by title
+- 🔍 Search by title
 - 📋 Display comprehensive information (title, author, genre, publication year, status)
 
 ### 👥 User Management _(Admin Only)_
@@ -144,6 +143,14 @@ CREATE TABLE users (
 
 - 🔑 **Access Control:** Carefully manage access levels and permissions
 
+### Known Limitations
+
+- Passwords are stored and compared in **plain text** (no hashing)
+- Any user can tick "Admin" during registration, so the admin role is **not** a real access-control boundary
+- The admin panel displays users' passwords
+- Minimal input validation
+
+These were left as-is to keep the focus on Tkinter/SQLite CRUD fundamentals. A production version would need password hashing (e.g. `bcrypt`), server-side role assignment, and proper input validation.
 ---
 
 ## 📝 Usage Example
